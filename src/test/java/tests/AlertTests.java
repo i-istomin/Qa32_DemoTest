@@ -14,9 +14,9 @@ public class AlertTests extends TestBase{
         app.alert().selectAlerts();
     }
 
-    @Test
-    public void test(){
+
+
+
 
     }
 
-}

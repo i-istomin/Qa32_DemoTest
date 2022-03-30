@@ -26,17 +26,24 @@ public class SelectTests extends TestBase {
     }
 
     @Test
-    public void standardMultiSelectTest(){
-
+    public void standardMultiSelectTest() {
         app.select().multiSelectCar("volvo,saab,opel");//tut mohno napisat neskolko sugey rahavim, chtobi opredelit chto tut multiselect
     }
 
     @Test
-    public void selectOneTest(){
+    public void selectOneTest() {
         app.select().selectSalutation("Mr.");
         app.select().pause(2000);
         app.select().selectSalutation("Mrs.");
         app.select().pause(2000);
         app.select().selectSalutation("Dr.");
+    }
+
+    @Test
+    public void selectValue() {
+        app.select().selectOption("Group 1, option 1");
+        app.select().pause(2000);
+        app.select().selectOption("Group 2, option 1");
+        app.select().selectOption("A root option");
     }
 }

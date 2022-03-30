@@ -56,4 +56,16 @@ public class HelperSelect extends HelperBase {
         wd.findElement(By.xpath(locator)).click();//locator eto string
 
     }
+
+    public void selectOption(String value) {
+        wd.findElement(By.id("withOptGroup")).click();
+        wd.findElement(By.xpath("//*[text()='Group 1, option 1']")).click();
+        wd.findElement(By.id("withOptGroup")).click();
+        wd.findElement(By.xpath("//*[text()='Group 2, option 1']")).click();//
+        wd.findElement(By.id("withOptGroup")).click();
+        wd.findElement(By.xpath("//*[text()='A root option']")).click();
+
+
+    }
+
 }

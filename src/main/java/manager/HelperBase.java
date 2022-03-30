@@ -44,4 +44,6 @@ public class HelperBase {
     public void hideAds(){
         click(By.id("close-fixedban"));
     }
+
+
 }
