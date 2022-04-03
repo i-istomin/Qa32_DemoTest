@@ -13,6 +13,7 @@ public class HelperBase {
     public boolean isElementPresent(By locator) {
         return wd.findElements(locator).size() > 0;
     }
+
     public void hideFooter(){
         JavascriptExecutor js = (JavascriptExecutor) wd;
         js.executeScript("document.querySelector('footer').style.display='none';");

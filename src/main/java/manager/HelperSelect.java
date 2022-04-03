@@ -59,7 +59,14 @@ public class HelperSelect extends HelperBase {
 
     public void selectOption(String value) {
         wd.findElement(By.id("withOptGroup")).click();
-        wd.findElement(By.xpath("//*[text()='Group 1, option 1']")).click();
+        //wd.findElement(By.xpath("//*[text()='Group 1, option 1']")).click(); // "//*[text()='Group 1, option 1']" --> eto string(peremennaya)
+        //mi ee vinosim otdelno i potom zanosim v wd.findElement(By.xpath(locator)).click();
+        String locator1 = "//*[text()='Group 1, option 1']";
+        String locator = "//*[text()='" + value + "']";
+        //STRING FORMAT:  Group 1, option 1 ---> tolko eto mi meniaem, poetomu vmesto etoo mesta mi postavim %s
+        String locator3 = String.format("//*[text()='%s']", value); //String.format("//*[text()='Group 1, option 1']",value);
+        wd.findElement(By.xpath(locator3)).click();
+
         wd.findElement(By.id("withOptGroup")).click();
         wd.findElement(By.xpath("//*[text()='Group 2, option 1']")).click();//
         wd.findElement(By.id("withOptGroup")).click();
@@ -67,5 +74,6 @@ public class HelperSelect extends HelperBase {
 
 
     }
+
 
 }

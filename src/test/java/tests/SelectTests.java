@@ -42,8 +42,10 @@ public class SelectTests extends TestBase {
     @Test
     public void selectValue() {
         app.select().selectOption("Group 1, option 1");
-        app.select().pause(2000);
-        app.select().selectOption("Group 2, option 1");
-        app.select().selectOption("A root option");
+        app.select().pause(1000);
+//        app.select().selectOption("Group 2, option 1");
+//        app.select().selectOption("A root option");
     }
+
+
 }
